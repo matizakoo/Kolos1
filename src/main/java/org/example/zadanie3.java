@@ -4,16 +4,15 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.net.InetAddress;
 import java.net.Socket;
-import java.net.UnknownHostException;
 
-public class SendText {
+public class zadanie3 {
     private Socket socket;
 
     private String host;
 
     private int port;
 
-    public SendText(String host, int port) {
+    public zadanie3(String host, int port) {
         this.host = host;
         this.port = port;
     }
@@ -21,7 +20,7 @@ public class SendText {
     public void connect(){
         try {
             InetAddress address = InetAddress.getByName(host);
-            this.socket = new Socket(address, port);
+            socket = new Socket(address, port);
             if (socket.isConnected()){
                 System.out.println("Nawiązano połączenie ");
             }
